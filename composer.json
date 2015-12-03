@@ -1,0 +1,12 @@
+{
+    "name": "leowise",
+    "autoload" : {
+        "psr-4" : {
+            "DSLPAL\\" : "src/dslpal",
+            "Calendar\\" : "src/calendar"
+        }
+    },
+    "require" : {
+        "symfony/validator" : "2.7.x"
+    }
+}
