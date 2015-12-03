@@ -76,6 +76,7 @@ class DSLValidator
     public function validate($value)
     {
         $violations = $this->validator->validate($value, $this->assertList);
+        $this->end();
         return $violations;
     }
 
