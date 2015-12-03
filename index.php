@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 1);
+
 require __DIR__ . '/vendor/autoload.php';
 
 use DSLPAL\DSLValidator;
@@ -10,8 +12,7 @@ $email = $fluent->length(5, 20)
                 ->email()
          ->validate('teste@teste.com');
 
-var_dump($email->validate('leo@teste.com')->count());
-var_dump($email->validate('wrongemail')->count());
+var_dump($email->count());
 
 $constraints = $fluent->collection([
     'nome'  =>  $fluent
@@ -33,7 +34,3 @@ $res = $constraints->validate([
     'email' => 'testeteste.com',
     'sexo' => 'N'
 ]);
-
-foreach($res as $error) {
-    echo $error . '<br>';
-}
