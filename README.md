@@ -1,6 +1,8 @@
 # Exemplos palestra DSL
 A simple DSL example validator for the symfony/validator component and a sample Calendar DSL
 
+[slide share](http://goo.gl/kCRrvu)
+
 Simple use
 ```php
 use DSLPAL\DSLValidator;
